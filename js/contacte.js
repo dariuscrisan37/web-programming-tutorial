@@ -1,10 +1,8 @@
-
-
 function getRow(firstName, lastName, phone) {
     if(phone == undefined){
         phone = '';
     }
-    if(typeof lastName ==undefined){
+    if(typeof lastName == undefined){
         lastName = '';
     }
 
@@ -12,23 +10,27 @@ function getRow(firstName, lastName, phone) {
     return row;
 }
 
-var contacte = [
-    {firstName: 'Nicolae',   lastname: 'Matei' ,phone: '07777777'},
-    {firstName: 'Nicolae',   lastname: 'Matei' ,phone: '07777777'},
-    {firstName: 'Nicolae',   lastname: 'Matei' ,phone: '07777777'},
-    {firstName: 'Nicolae',   lastname: 'Matei' ,phone: '07777777'},
-    {firstName: 'Andrei'},
-    {lastName: 'Basescu'}
-];
+var contacte = [];
 
-    var tableContent = '';
-    for(var i = 0; i< contacte.length; i++) {
-        var contact = contacte[i];
-        tableContent += getRow(contact.firstName, contact.lastname, contact.phone);
-    }
+var tableContent = '';
+
+// for(var i = 0; i < contacte.length; i++) {
+//     createRow(contacte[i])
+// }
+
+function createRow(contact){
+    tableContent += getRow(contact.firstName, contact.lastname, contact.phone);
+}
+
+$.ajax('date/contacte.json').done(function(contacte){
+    console.info('contacte', contacte);
+    contacte.forEach(createRow);
+    $("#contacts-list tbody").html(tableContent);
+
+});
 
 
-$("#contacts-list tbody").html(tableContent);
+
 
 
     // 1.convert from array of arrays into json
