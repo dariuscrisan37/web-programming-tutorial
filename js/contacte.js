@@ -31,14 +31,14 @@ $.ajax('date/contacte.json').done(function(contacte){
 
 });
 
-$('.edit').click(function (){
-    editContact('Matei','Nicolae','151515');
-});
+// $('.edit').click(function (){
+//     editContact('Matei','Nicolae','151515');
+// });
 
-function editContact(firstName, lastName, phone) {
-    $('input[name=firstName]'.val(lastName);
-    $('input[name=firstName]'.val(firstName);
-    $('input[name=firstName]'.val(phone);
-}
+// function editContact(firstName, lastName, phone) {
+//     $('input[name=firstName]'.val(firstName);
+//     $('input[name=firstName]'.val(lastName);
+//     $('input[name=firstName]'.val(phone);
+// }
 
 
