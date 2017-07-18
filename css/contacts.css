@@ -30,3 +30,8 @@
 #contacts-list th{
     font-weight: bold;
 }
+
+#contacts-list .actions span {color: blue;}
+#contacts-list .actions span {display: none;}
+#contacts-list .actions span:hover {color: red;}
+#contacts-list .actions td:hover span {color: red;}
