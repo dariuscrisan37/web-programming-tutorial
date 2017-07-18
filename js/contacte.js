@@ -1,13 +1,11 @@
-function getRow(firstName, lastName, phone) {
-    if(phone == undefined){
-        phone = '';
-    }
-    if(typeof lastName == undefined){
-        lastName = '';
-    }
+function getRow(contact) {
+    var id = contact.id || '';
+    var firstName = contact.firstName || '';
+    var lastName = contact.lastName || '';
+    var phone = contact.phone || '';
 
-    var row ='<tr><td>'+lastName+'</td><td>'+firstName+'</td><td>'+phone+'</td></tr>';
-    return row;
+    return '<tr><td>'+lastName+'</td><td>'+firstName+'</td><td>'+phone+'</td>'+ '' +
+        '<td>[<a href="date/remove.html?id=' + id + '">x</a>]</td>'+'</tr>';
 }
 
 var contacte = [];
@@ -19,7 +17,7 @@ var tableContent = '';
 // }
 
 function createRow(contact){
-    tableContent += getRow(contact.firstName, contact.lastname, contact.phone);
+    tableContent += getRow(contact);
 }
 
 $.ajax('date/contacte.json').done(function(contacte){
@@ -28,30 +26,3 @@ $.ajax('date/contacte.json').done(function(contacte){
     $("#contacts-list tbody").html(tableContent);
 
 });
-
-
-
-
-
-    // 1.convert from array of arrays into json
-    // 2.load contacts from json file with AJAX
-    // 3.remove contacts (UI)
-    // 4.edit contact (UI)
-
-var person = {
-    lastName: "Matei",
-    firstName: "Nicolae",
-    age: 19,
-    married: true,
-    skills: ["html", "css" , "js"],
-    voiceCall: function(nume) {
-        console.info(' te rog sa suni pe', nume);
-    },
-    partner: {
-        firstName: "M",
-        age: 18
-    }
-};
-
-console.info(person.firstName);
-person.voiceCall("Soacra");
