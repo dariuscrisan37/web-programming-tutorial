@@ -1,8 +1,34 @@
 [
-  {"firstName": "Crisan", "lastName": "Darius", "phone": "01"},
-  {"firstName": "Cadar", "lastName": "Daniel", "phone": "02"},
-  {"firstName": "Lupas", "lastName": "Florin", "phone": "03"},
-  {"firstName": "Crisan", "lastName": "Eveline", "phone": "04"},
-  {"firstName": "Andrei"},
-  {"lastName": "Basescu"}
+  {
+    "id": 1,
+    "firstName": "Crisan",
+    "lastName": "Darius",
+    "phone": "01"
+  },
+  {
+    "id": 2,
+    "firstName": "Cadar",
+    "lastName": "Daniel",
+    "phone": "02"
+  },
+  {
+    "id": 3,
+    "firstName": "Lupas",
+    "lastName": "Florin",
+    "phone": "03"
+  },
+  {
+    "id": 4,
+    "firstName": "Crisan",
+    "lastName": "Eveline",
+    "phone": "04"
+  },
+  {
+    "id": 5,
+    "firstName": "Andrei"
+  },
+  {
+    "id": 6,
+    "lastName": "Basescu"
+  }
 ]
