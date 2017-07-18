@@ -1,22 +1,31 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Semafor
-</title>
-<link rel="stylesheet" type="text/css" href="css/semafor.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Semafor</title>
+
+    <link rel="stylesheet" type="text/css" href="css/semafor.css">
+
 </head>
 <body>
-<div id="controlPanel">
-  <h1 id="stopButton" class="button">Stop</h1>
-  <h1 id="slowButton" class="button">Slow</h1>
-  <h1 id="goButton" class="button">Go</h1>
+
+<div>
+    <table>
+        <tr>
+            <td id="red"></td>
+        </tr>
+        <tr>
+            <td id="yellow"></td>
+        </tr>
+        <tr>
+            <td id="green"></td>
+        </tr>
+    </table>
 </div>
-<div id="traffic-light">
-  <div id="stopLight" class="bulb"></div>
-  <div id="slowLight" class="bulb"></div>
-  <div id="goLight" class="bulb"></div>
-</div>
-<script src="js/semafor.js">
-</script>
+
+
+<script src ="js/semafor.js"></script>
+
 </body>
 </html>

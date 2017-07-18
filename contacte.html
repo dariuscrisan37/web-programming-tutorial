@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our First Web Site</title>
+    <title>Agenda</title>
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cards.css">
+    <link rel="stylesheet" type="text/css" href="css/contacts.css">
 
     <link rel="stylesheet" type="text/css" href="css/responsive/max-600px.css" media="(max-width: 600px)">
     <link rel="stylesheet" type="text/css" href="css/responsive/min-1024px.css" media="(min-width: 1024px)">
@@ -34,7 +34,6 @@
                 <li><a href="https://www.linkedin.com/in/nicolaematei" title="my personal projects" target="_blank">Projects</a></li>
                 <li><a href="https://www.linkedin.com/in/nicolaematei" title="about me" target="_blank">About</a></li>
                 <li><a href="https://www.linkedin.com/in/nicolaematei" title="contact me" target="_blank">Contact</a></li>
-                <li><a href="semafor.html">Semafor</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </div>
@@ -70,7 +69,8 @@
             </div>
 
             <div id="google-search" class="widget">
-
+                <div class="header">Google Search</div>
+                <div class="content">
                     <form action="https://www.google.com/search" target="_blank">
                         <label for="q">Keyword(s):</label>
                         <input type="text" name="q" id="q">
@@ -79,34 +79,32 @@
                         <input type="hidden" name="as_sitesearch" value="fasttrackit.org">
                         <input type="submit" value="Search">
                     </form>
-
+                </div>
             </div>
         </div>
 
         <div id="content">
-            <div id="breadcrumb">HOME : welcome home</div>
+            <div id="breadcrumb">HOME : Agenda</div>
 
-            <h1>Homework</h1>
-            <p>Write some info about you.</p>
-            <p>
-                Make this web site as you wish. Change/Add any <strong>attributes</strong> you have learned in this example.
-                Add/edit <strong>elements</strong> in HTML page as you wish, to create custom components in your page.
-            </p>
-            <h2>Exercises</h2>
-            <ol>
-                <li>Add new widget</li>
-                <li>Make sure you understand how to find any elements with:
-                    <ul>
-                        <li>document.getElementById('element-id')</li>
-                        <li>document.getElementsByClassName("class-name")</li>
-                        <li>document.getElementsByTagName("a")</li>
-                        <li>and nested combinations of those</li>
-                    </ul>
-                </li>
-                <li>play in FireBug to find and change some attributes (color, display, width, height, etc.) of some elements</li>
-                <li>Make all widgets collapsible</li>
-            </ol>
-            <p>I hope is all clear.</p>
+            <h1>Contacte</h1>
+            <form action="#">
+                <input type="text" placeholder="Nume">
+                <input type="text" placeholder="Prenume">
+                <input type="text" placeholder="Telefon">
+                <button>Add</button>
+            </form>
+            <table id="contacts-list">
+                <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Prenume</th>
+                    <th>Telefon</th>
+                </tr>
+                </thead>
+               <tbody>
+
+               </tbody>
+            </table>
         </div>
 
         <div class="clear"></div>
@@ -123,50 +121,7 @@
 <script src="js/code-examples/functions-jquery.js" type="text/javascript"></script>
 
 <script src="js/responsive.js" type="text/javascript"></script>
-
-<!--<script>-->
-    <!--//primul script-->
-    <!--console.info("salut");-->
-
-    <!--//declaration-->
-    <!--function getInfo(name) {-->
-        <!--var msg = "Hello " + name + ", " + "welcome at FastTrackIT.";-->
-        <!--return msg;-->
-    <!--}-->
-
-    <!--//store result to call to function-->
-    <!--var info = getInfo("Darius");-->
-    <!--console.info(info);-->
-
-    <!--console.info (2+5);-->
-
-    <!--function adunaNumerele (a, b) {-->
-        <!--console.info ("primul numar este " + a);-->
-        <!--console.info ("al doilea numar este " + b);-->
-        <!--var rezultat = a + b;-->
-        <!--rezultat = rezultat * 0.9-->
-        <!--return rezultat;-->
-    <!--}-->
-
-    <!--var calculat = adunaNumerele (2,3)-->
-    <!--console.info (calculat);-->
-
-    <!--function calcValuta (x, y) {-->
-        <!--console.info ("produsul costa " + x);-->
-        <!--console.info ("valuta la zi este de " + y + " lei");-->
-        <!--var rezultat = x / y;-->
-        <!--rezultat = rezultat * 1.19-->
-        <!--return rezultat;-->
-    <!--}-->
-
-    <!--var calculat = calcValuta (2700,4.5)-->
-    <!--console.info (calculat + " euro total cu TVA");-->
-
-<!--</script>-->
-
-<!--<script src="js/calculator-banca.js"></script>-->
-<!--<script src="js/calculator-copii.js"></script>-->
-<script src ="js/dom-examples.js"></script>
+<script src="js/contacte.js"></script>
 
 </body>
 </html>
