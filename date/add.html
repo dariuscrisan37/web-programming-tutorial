@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <!--<meta http-equiv=”refresh” content=”1000" />-->
-    <meta http-equiv="refresh" content="; url=../contacte.html" />
-    <title>Add Contact</title>
+    <meta http-equiv="refresh" content="5;url=../contacte.html" />
+    <link rel="stylesheet" type="text/css" href="../css/contacts.css">
 </head>
-<body>
-<p>Contact Added! (<div id="contact-id"></div>)</p>
-(<div id="contact-id"></div>)
+<body >
+
+<p class="info">contact added</p> (<div id="contact-id"></div>)
+
 <script>
     var parameters = location.search;
     parameters.substr(1);
     var paramArray = parameters.split('&');
     console.info(paramArray);
     document.getElementById('contact-id').innerHTML = paramArray.join ('; <br>') + ';';
-//    document.getElementById('contact-id').innerHTML = paramArray.replace (/&/ig, '; <br>') + ';';
 </script>
 </body>
 </html>

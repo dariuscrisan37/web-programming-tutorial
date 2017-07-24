@@ -31,7 +31,18 @@
     font-weight: bold;
 }
 
-/*#contacts-list .actions span {color: blue;}*/
-/*#contacts-list .actions span {display: none;}*/
-/*#contacts-list .actions span:hover {color: red;}*/
-/*#contacts-list .actions td:hover span {color: red;}*/
+p.info {
+    margin-left: 35%;
+    margin-top: 15%;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #449d44;
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    padding: 20px;
+    text-shadow: 3px 3px 3px black;
+}
