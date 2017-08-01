@@ -5,7 +5,7 @@ function getRow(contact) {
     var phone = contact.phone || '';
 
     return '<tr><td>'+lastName+'</td><td>'+firstName+'</td><td>'+phone+'</td>'+ '' +
-        '<td>[<a href="date/remove.html?id=' + id + '">x</a>]</td>'+'</tr>';
+        '<td class="actions">[<a href="date/remove.html?id=' + id + '">x</a>]</td>'+'</tr> <span>a href="#"</span>';
 }
 
 var contacte = [];

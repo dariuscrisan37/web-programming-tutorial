@@ -1,8 +1,6 @@
 [
-  {"id":1, "firstName": "Nicolae",   "lastName": "Matei" ,"phone": "07777777"},
-  {"id":2, "firstName": "Nicolae",   "lastName": "Matei" ,"phone": "07777777"},
-  {"id":3, "firstName": "Nicolae",   "lastName": "Matei" ,"phone": "07777777"},
-  {"id":4, "firstName": "Nicolae",   "lastName": "Matei" ,"phone": "07777777"},
-  {"id":5, "firstName": "Andrei"},
-  {"id":6, "lastname": "Basescu"}
+  {"id": 1, "firstName": "Nicolae", "lastName": "Matei", "phone": "01"},
+  {"id": 2, "firstName": "Nicoleta", "lastName": "Matei", "phone": "02"},
+  {"id": 3, "firstName": "Andrei", "lastName": "Ion", "phone": "03"},
+  {"id": 4, "firstName": "Alexandra", "lastName": "Vasile", "phone": "04"}
 ]
