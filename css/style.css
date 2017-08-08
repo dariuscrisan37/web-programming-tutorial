@@ -183,6 +183,10 @@ footer {
     border: 1px solid #29a7e1;
 }
 
+#contacts-list .actions a{
+    text-decoration: none;
+    font-size: 12px;
+}
 #contacts-list .actions span {
     display: none;
 }
