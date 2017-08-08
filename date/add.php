@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta http-equiv="refresh" content="5;url=../contacte.html" />
+    <meta http-equiv="refresh" content="0;url=../contacte.html" />
 </head>
 <body>
 
@@ -22,14 +22,6 @@ file_put_contents("contacte.json", $contentString);
 
 ?>
 
-contact added (<div id="contact-id"></div>)
-
-<script>
-    var parameters = location.search.substr(1);
-    var paramArray = parameters.split('&');
-    console.info(paramArray);
-    document.getElementById('contact-id').innerHTML = paramArray.join('; <br>') + ';';
-    //    document.getElementById('contact-id').innerHTML = parameters.replace(/&/ig, '; <br>') + ';';
-</script>
+contact added...
 </body>
 </html>

@@ -23,6 +23,9 @@ var tableContent = '';
 function createRow(contact){
     tableContent += getRow(contact);
 }
+// 1)TODO disable cache
+// 2) TODO response/content type (json)
+// 3) TODO status codes: 200, 404, 5**, 3**
 
 $.ajax('date/contacte.json').done(function(contacte){
     console.info('contacte', contacte);
@@ -39,3 +42,9 @@ function editContact(firstName, lastName, phone) {
     $('input[name=lastName]').val(lastName);
     $('input[name=phone]').val(phone);
 }
+// 1. convert from array of arrays into json
+// 2. load contacts from json file with AJAX
+// 3. remove contacts (UI)
+// 4. edit contact (UI)
+// 5. TODO php includes / templates
+// 6. TODO create new number (auto increment)
