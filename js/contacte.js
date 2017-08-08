@@ -29,7 +29,7 @@ $.ajax('date/contacte.json').done(function(contacte){
     contacte.forEach(createRow);
     $("#contacts-list tbody").html(tableContent);
 
-    $(.edit).click(function (){
+    $('.edit').click(function(){
         editContact('Matei', 'Nicolae', '0232');
     });
 });
