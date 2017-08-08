@@ -4,6 +4,23 @@
 </head>
 <body>
 
+<?php
+$contentString = file_get_contents("contacte.json");
+$contacte = json_decode($contentString, true);
+
+$newPerson = array(
+    "id" => 5,
+    "firstName" => "New",
+    "lastName" => "Person",
+    "phone" => "007"
+);
+
+$contacte[] = $newPerson;
+$contentString = json_encode($contacte);
+file_put_contents("contacte.json", $contentString);
+
+?>
+
 contact added (<div id="contact-id"></div>)
 
 <script>
