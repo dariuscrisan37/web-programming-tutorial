@@ -1,32 +1,42 @@
 function getRow(contact) {
-    var id = contact.id || '';
-    var firstName = contact.firstName || '';
-    var lastName = contact.lastName || '';
+    var id = contact.id;
     var phone = contact.phone || '';
-
-    return '<tr><td>' + lastName + '</td><td>' + firstName + '</td><td>' + phone + '</td>' +
+    var lastName = contact.lastName || '';
+    var firstName = contact.firstName || '';
+    var row = '<tr><td>' + lastName + '</td><td>' + firstName + '</td><td>' + phone + '</td>' +
         '<td class="actions">'+
-        '<span><a href="date/remove.html?id=' + id + '">&#x2716;</a></span> '+
-        '<span><a href="#">&#x270E;</a></span>'+
+        '<span><a href="date/remove-db.php?id=' + id + '">&#x2716;</a></span> '+
+        '<span><a href="#" class="edit" data-id="' + id + '">&#x270E;</a></span>'+
         '</td>' +
         '</tr>';
+    return row;
 }
-
-var contacte = [];
 
 var tableContent = '';
 
-// for(var i = 0; i < contacte.length; i++) {
-//     createRow(contacte[i])
-// }
-
-function createRow(contact){
+function createRow(contact) {
     tableContent += getRow(contact);
 }
 
-$.ajax('date/contacte.json').done(function(contacte){
-    console.info('contacte', contacte);
+$.ajax('date/list.php', {
+    cache: false,
+    dataType: 'json'
+}).done(function (contacte) {
+    console.debug('contacts loaded', contacte);
     contacte.forEach(createRow);
     $("#contacts-list tbody").html(tableContent);
 
-});
+    $('#contacts-list a.edit').click(function() {
+        var id = $(this).data('id');
+        var contact = contacte.find(function(c) {
+            return c.id == id;
+        });
+        console.debug('remove', id, contact, this);
+
+        $('input[name=id]').val(contact.id);
+        $('input[name=lastName]').val(contact.lastName);
+        $('input[name=firstName]').val(contact.firstName);
+        $('input[name=phone]').val(contact.phone);
+    });
+})
+

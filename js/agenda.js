@@ -6,8 +6,8 @@ function getRow(person) {
         '<td>' + person.lastName + '</td>'+
         '<td>07560000001</td>'+
         '<td>' +
-            '<button class="edit" data-id="' + person.id + '">edit</button> ' +
-            '<button class="remove" data-id="' + person.id + '">x</button>' +
+        '<button class="edit" data-id="' + person.id + '">edit</button> ' +
+        '<button class="remove" data-id="' + person.id + '">x</button>' +
         '</td>'+
         '</tr>';
     return row;

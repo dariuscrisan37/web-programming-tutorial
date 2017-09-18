@@ -1,18 +1,17 @@
 <html>
 <head>
     <meta http-equiv="refresh" content="5;url=../contacte.html" />
-    <link rel="stylesheet" type="text/css" href="../css/contacts.css">
 </head>
-<body >
+<body>
 
-<p class="info">contact added</p> (<div id="contact-id"></div>)
+contact added (<div id="contact-id"></div>)
 
 <script>
-    var parameters = location.search;
-    parameters.substr(1);
+    var parameters = location.search.substr(1);
     var paramArray = parameters.split('&');
     console.info(paramArray);
-    document.getElementById('contact-id').innerHTML = paramArray.join ('; <br>') + ';';
+    document.getElementById('contact-id').innerHTML = paramArray.join('; <br>') + ';';
+    //    document.getElementById('contact-id').innerHTML = parameters.replace(/&/ig, '; <br>') + ';';
 </script>
 </body>
 </html>
